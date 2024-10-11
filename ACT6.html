@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convertidor de Unidades</title>
+  <style>
+    /* Estilos generales del cuerpo */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #74ebd5, #acb6e5); /* Fondo con degradado */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Estilos del contenedor del convertidor */
+    .convertidor {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra suave */
+      width: 300px; /* Ancho fijo */
+      text-align: center;
+    }
+
+    /* Estilos del título principal */
+    .convertidor h1 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    /* Estilos para los inputs y selects */
+    label {
+      margin: 15px 0 5px;
+      font-size: 1em;
+      color: #666;
+    }
+
+    select, input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    /* Estilo del botón de conversión */
+    button {
+      background-color: #ff7b54; /* Color de fondo del botón */
+      color: white;
+      padding: 10px 20px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 8px; /* Bordes redondeados */
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease; /* Transición suave */
+    }
+
+    /* Efecto hover en el botón */
+    button:hover {
+      background-color: #ff6b3b; /* Color al pasar el cursor */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+      transform: translateY(-2px); /* Efecto de elevación al pasar el cursor */
+    }
+
+    /* Estilos del resultado */
+    .resultado {
+      margin-top: 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- Contenedor principal del convertidor de unidades -->
+  <div class="convertidor">
+    <h1>Convertidor de Unidades</h1>
+    
+    <!-- Input para ingresar el valor numérico -->
+    <label for="valor">Valor:</label>
+    <input type="number" id="valor" placeholder="Ingresa un valor">
+
+    <!-- Selección de la unidad de entrada -->
+    <label for="unidad-entrada">De:</label>
+    <select id="unidad-entrada">
+      <option value="metros">Metros</option>
+      <option value="kilometros">Kilómetros</option>
+      <option value="millas">Millas</option>
+    </select>
+
+    <!-- Selección de la unidad de salida -->
+    <label for="unidad-salida">A:</label>
+    <select id="unidad-salida">
+      <option value="metros">Metros</option>
+      <option value="kilometros">Kilómetros</option>
+      <option value="millas">Millas</option>
+    </select>
+
+    <!-- Botón de conversión -->
+    <button id="convertir">Convertir</button>
+
+    <!-- Div que mostrará el resultado de la conversión -->
+    <div class="resultado" id="resultado">Resultado: </div>
+  </div>
+
+  <!-- Script que manejará la lógica del convertidor -->
+  <script src="script5.js"></script>
+</body>
+</html>
+
